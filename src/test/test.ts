@@ -48,7 +48,7 @@ test("Error verification", async (t) => {
   await t.expect(hotelLogo.exists).ok();
 
   await t
-    .typeText(name, "PersonB")
+    .typeText(name, "PersonA")
     .typeText(email, "test@gmail.com")
     .typeText(phone, Math.floor((Math.random() * 100) + 1).toString())
     .typeText(email_subject, "test_subject")
