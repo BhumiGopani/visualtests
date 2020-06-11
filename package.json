@@ -8,5 +8,8 @@
   "devDependencies": {
     "@percy/testcafe": "^0.2.0",
     "testcafe": "^1.8.6"
+  },
+  "dependencies": {
+    "chance": "^1.1.6"
   }
 }
