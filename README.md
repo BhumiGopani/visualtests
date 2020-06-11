@@ -1,2 +1,2 @@
 # visualtests
-Visual Testing
+Visual Testing using percy.
