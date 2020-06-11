@@ -15,5 +15,5 @@ jobs:
         run: yarn
 
       - name: Run Tests
-        run: yarn testcafe chrome src/test
+        run: yarn testcafe chrome:headless src/test
       
