@@ -15,5 +15,5 @@ jobs:
         run: yarn
 
       - name: Run Tests
-        run: yarn testcafe test.ts
+        run: yarn testcafe src/test
       
