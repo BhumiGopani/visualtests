@@ -1,4 +1,5 @@
 import { Selector, t } from "testcafe";
+import * as percySnapshot from "@percy/testcafe";
 
 const hotelLogo = Selector(".hotel-logoUrl");
 const name = Selector("#name");
@@ -15,6 +16,8 @@ fixture`Getting Started`.page`https://automationintesting.online/#/`;
 test("My first booking query", async (t) => {
   await t.click(next).click(next).click(next).click(next).click(close);
   await t.expect(hotelLogo.exists).ok();
+  await percySnapshot(t, "Home Page verification screenshot");
+  console.log("Screenshot of hotel logo compared");
   await t
     .typeText(name, "PersonA")
     .typeText(email, "test@gmail.com")
@@ -22,6 +25,10 @@ test("My first booking query", async (t) => {
     .typeText(email_subject, "test_subject")
     .typeText(message, "Give me a nice view!!!")
     .click(submit);
-  await t.expect(Selector('h2').withText("Thanks for getting in touch").exists).ok();
+  await t
+    .expect(Selector("h2").withText("Thanks for getting in touch").exists)
+    .ok();
   console.log("Test Completed");
+  await percySnapshot(t, "Final verification screenshot");
+  console.log("Final message compared");
 });

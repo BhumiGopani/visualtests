@@ -6,6 +6,7 @@
   "author": "gopani-bhumi <gopani@architrave.de>",
   "license": "MIT",
   "devDependencies": {
+    "@percy/testcafe": "^0.2.0",
     "testcafe": "^1.8.6"
   }
 }

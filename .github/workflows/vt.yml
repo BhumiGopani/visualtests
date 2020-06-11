@@ -18,8 +18,8 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --frozen-lockfile
 
       - name: Run Tests
-        run: yarn testcafe chrome:headless src/test
+        run: yarn percy exec -- testcafe chrome:headless src/test
       
