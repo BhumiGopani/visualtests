@@ -1,0 +1,2 @@
+# visualtests
+Visual Testing
