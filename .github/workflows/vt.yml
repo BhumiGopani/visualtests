@@ -11,6 +11,12 @@ jobs:
         with:
           node-version: 13.x    
 
+      - uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install dependencies
         run: yarn
 
