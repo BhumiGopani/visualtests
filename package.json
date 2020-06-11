@@ -1,0 +1,11 @@
+{
+  "name": "dt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BhumiGopani/visualtests",
+  "author": "gopani-bhumi <gopani@architrave.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "testcafe": "^1.8.6"
+  }
+}
